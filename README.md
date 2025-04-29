@@ -6,6 +6,12 @@ This is a NestJS-based backend service for managing orders. It uses PostgreSQL a
 
 ## Local Development
 
+```
+docker-compose up -d
+npm install
+npm run start:dev
+```
+
 ### Tech Stack
 
 - **Framework**: NestJS
