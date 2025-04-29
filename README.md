@@ -50,7 +50,7 @@ The database would utilize AWS RDS Postgres. The API would be deployed on AWS Fa
 ## Future Considerations / Todo List / Improving Scalability
 
 * Configure AWS Fargate
-* Implement CI / CD
+* Implement CI / CD with GitHub actions
 * Configure logging to AWS CloudWatch
 * Configure AWS RDS with read replicas for high-traffic scenarios
 * Need to handle authentication and authorization via AWS API Gateway. This API obviously cannot be publicly accessible.
