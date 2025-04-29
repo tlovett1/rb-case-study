@@ -45,7 +45,7 @@ The application uses a PostgreSQL database with the following main table:
 
 ## Deployment / Infrastructure
 
-The database would utilize AWS RDS Postgres. The API would be deployed on AWS Fargate which would handle automatic scaling and would be cost efficienct given the swings in traffic. I would put a CDN (AWS CloudFront) in front of the application to cache common requests near users and protect against spam.
+The database would utilize AWS RDS Postgres. The API would be deployed on AWS Fargate which would handle automatic scaling and would be cost efficient given the swings in traffic. I would put a CDN (AWS CloudFront) in front of the application to cache common requests near users and protect against spam.
 
 ## Future Considerations / Todo List / Improving Scalability
 
