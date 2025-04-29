@@ -1,19 +1,15 @@
 import { Injectable } from '@nestjs/common'
-import { DbService } from 'src/db/db.service'
-import { ordersTable, Order, OrderInsert } from '../db/schema'
+import { DbService } from '@/db/db.service'
+import { ordersTable, Order, OrderInsert } from '@/db/schema'
 import { eq } from 'drizzle-orm'
-import { InventoryService } from 'src/inventory/inventory.service'
-import { CustomersService } from 'src/customers/customers.service'
 
 @Injectable()
 export class OrdersService {
-  constructor(
-    private readonly dbService: DbService,
-    private readonly inventoryService: InventoryService,
-    private readonly customerService: CustomersService,
-  ) {}
+  constructor(private readonly dbService: DbService) {}
 
   async createOrder(order: OrderInsert) {
+    // Process order. Update shipping info
+
     const [createdOrder] = await this.dbService.db.insert(ordersTable).values(order).returning()
     return createdOrder
   }

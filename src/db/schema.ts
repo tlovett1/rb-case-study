@@ -7,7 +7,7 @@ export const ordersTable = pgTable(
   {
     id: integer('id').primaryKey().generatedByDefaultAsIdentity(),
     customerId: integer('customer_id').notNull(),
-    productIds: integer('product_ids').array(),
+    productIds: jsonb('product_ids').$type<Array<{ id: number; quantity: number; variantId: number }>>().notNull(), // Stores products like [ { id: 1, quantity: 1, variantId: 1 }, { id: 2, quantity: 1, variantId: 2 } ]
     data: jsonb(),
     shippingAddress: jsonb(),
     shippingCompany: text('shipping_company'),

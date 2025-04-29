@@ -1,5 +1,5 @@
 {
-  "id": "f8155f79-0b2d-4b8a-9c85-1b8ac0934f58",
+  "id": "0f434f99-2f63-4327-975e-482825a16df0",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -33,9 +33,9 @@
         },
         "product_ids": {
           "name": "product_ids",
-          "type": "integer[]",
+          "type": "jsonb",
           "primaryKey": false,
-          "notNull": false
+          "notNull": true
         },
         "data": {
           "name": "data",

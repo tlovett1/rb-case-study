@@ -1,5 +1,9 @@
 import { Injectable } from '@nestjs/common'
 
+/**
+ * This communicates with the customer microservice.
+ */
+
 type Customer = {
   id: number
   name: string
