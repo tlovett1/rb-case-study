@@ -7,8 +7,15 @@ This is a NestJS-based backend service for managing orders. It uses PostgreSQL a
 ## Local Development
 
 Using Node 20.x:
+
 ```
 docker-compose up -d
+```
+
+Set `.env.local` based on `.env.local.example`
+
+Finally:
+```
 npm install
 npm run start:dev
 ```
