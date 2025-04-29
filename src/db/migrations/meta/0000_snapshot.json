@@ -1,5 +1,5 @@
 {
-  "id": "d22ff508-9710-4d6a-927f-f34a4d75d9db",
+  "id": "f8155f79-0b2d-4b8a-9c85-1b8ac0934f58",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "7",
   "dialect": "postgresql",
@@ -12,7 +12,18 @@
           "name": "id",
           "type": "integer",
           "primaryKey": true,
-          "notNull": true
+          "notNull": true,
+          "identity": {
+            "type": "byDefault",
+            "name": "orders_id_seq",
+            "schema": "public",
+            "increment": "1",
+            "startWith": "1",
+            "minValue": "1",
+            "maxValue": "2147483647",
+            "cache": "1",
+            "cycle": false
+          }
         },
         "customer_id": {
           "name": "customer_id",
@@ -29,6 +40,24 @@
         "data": {
           "name": "data",
           "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "shippingAddress": {
+          "name": "shippingAddress",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "shipping_company": {
+          "name": "shipping_company",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "shipping_tracking_number": {
+          "name": "shipping_tracking_number",
+          "type": "text",
           "primaryKey": false,
           "notNull": false
         },
